@@ -1,50 +1,122 @@
-# Welcome to your Expo app 👋
+# Vitracka Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile do ecossistema **Vitracka**, uma plataforma inteligente de saúde e performance que utiliza inteligência artificial para auxiliar usuários no gerenciamento de alimentação, treinos e evolução física.
 
-## Get started
+O aplicativo foi desenvolvido para oferecer uma experiência personalizada, conectando usuários ao seu planejamento nutricional, acompanhamento de treinos e um assistente inteligente capaz de fornecer orientações relacionadas aos objetivos individuais.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## Funcionalidades
 
-2. Start the app
+### Autenticação
 
-   ```bash
-   npx expo start
-   ```
+Sistema de gerenciamento de acesso dos usuários:
 
-In the output, you'll find options to open the app in a
+- Login e cadastro;
+- Controle de sessão;
+- Gerenciamento de dados personalizados.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Dashboard
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Central de acompanhamento diário do usuário:
 
-## Get a fresh project
+- Resumo nutricional;
+- Controle de calorias e macronutrientes;
+- Progresso de metas;
+- Visualização de informações do plano alimentar;
+- Acompanhamento do treino programado.
 
-When you're ready, run:
+### Inteligência Artificial
 
-```bash
-npm run reset-project
-```
+Assistente virtual integrado ao aplicativo:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Conversas personalizadas sobre alimentação e treinamento;
+- Suporte na adaptação de planos;
 
-## Learn more
+### Plano Alimentar
 
-To learn more about developing your project with Expo, look at the following resources:
+Visualização do planejamento nutricional:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Refeições organizadas por período do dia;
+- Informações nutricionais;
+- Distribuição de macronutrientes;
 
-## Join the community
+### Plano de Treino
 
-Join our community of developers creating universal apps.
+Gerenciamento dos treinos personalizados:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Visualização da rotina de exercícios;
+- Organização por sessões;
+- Informações de séries e repetições;
+
+### Check-in
+
+Sistema de acompanhamento de consistência:
+
+- Registro de atividades;
+- Monitoramento de progresso;
+- Histórico de acompanhamento.
+
+### Configurações
+
+Gerenciamento das preferências e informações da conta:
+
+- Dados pessoais;
+- Objetivos;
+- Preferências do aplicativo;
+- Configurações de usuário.
+
+---
+
+# Tecnologias
+
+## Mobile
+
+- React Native
+- TypeScript
+- Expo
+- React Navigation
+- Axios
+
+## Integração
+
+- API REST
+- Comunicação assíncrona com backend
+- Autenticação baseada em sessão/token
+
+---
+
+# Telas
+
+O aplicativo conta com as seguintes interfaces:
+
+- Login;
+- Dashboard;
+- Chat com IA;
+- Plano alimentar;
+- Plano de treino;
+- Check-in;
+- Configurações.
+
+---
+
+# Backend
+
+O aplicativo depende da API do Vitracka para autenticação, carregamento de dados do usuário e gerenciamento das funcionalidades da plataforma.
+
+Backend principal:
+https://github.com/euFezin/Vitracka
+
+---
+
+# Objetivo
+
+O Vitracka Mobile tem como objetivo disponibilizar uma experiência completa de acompanhamento fitness, unindo tecnologia, inteligência artificial e personalização para auxiliar usuários na construção de hábitos e evolução contínua.
+
+---
+
+# Status
+
+### Em desenvolvimento
+
+O aplicativo faz parte do ecossistema Vitracka e evolui integrado ao backend principal da plataforma, permitindo futuras expansões como novos recursos de acompanhamento, integrações com dispositivos de saúde e funcionalidades premium.
