@@ -1,3 +1,4 @@
+import { useColorScheme } from "@/hooks/use-color-scheme";
 import {
   DarkTheme,
   DefaultTheme,
@@ -8,10 +9,10 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import "react-native-reanimated";
+import { AuthProvider } from "../src/AuthContext";
 
-import { useColorScheme } from "@/hooks/use-color-scheme";
 import api from "../src/api";
-import { AuthProvider, useAuth } from "../src/AuthContext";
+import { useAuth } from "../src/AuthContext";
 import LoginScreen from "../src/screens/LoginScreen";
 import OnboardingScreen from "../src/screens/OnboardingScreen";
 import { colors } from "../src/theme";
@@ -21,7 +22,7 @@ export const unstable_settings = {
 };
 
 function AppGate() {
-  const { token, setToken } = useAuth();
+  const { token, setToken, carregandoToken } = useAuth();
   const [precisaOnboarding, setPrecisaOnboarding] = useState<boolean | null>(
     null,
   );
@@ -48,6 +49,21 @@ function AppGate() {
 
   function handleLoginSuccess(novoToken: string) {
     setToken(novoToken);
+  }
+
+  if (carregandoToken) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: colors.background,
+        }}
+      >
+        <ActivityIndicator size="large" color={colors.primary} />
+      </View>
+    );
   }
 
   if (!token) {
@@ -96,7 +112,7 @@ export default function RootLayout() {
     <AuthProvider>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <AppGate />
-        <StatusBar style="light" />
+        <StatusBar style="auto" />
       </ThemeProvider>
     </AuthProvider>
   );

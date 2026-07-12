@@ -4,6 +4,50 @@ Todas as mudanças relevantes do projeto serão documentadas neste arquivo.
 
 O formato segue o padrão de versionamento semântico.
 
+## [0.2.0-alpha] - 2026-07-12
+
+**Status:** Publicada
+
+### Adicionado
+
+- Implementação da persistência de sessão utilizando `expo-secure-store`, mantendo o usuário autenticado entre as aberturas do aplicativo.
+
+- Criação do sistema de alteração do plano alimentar diretamente pelo Dashboard, permitindo alternar entre bulking, cutting e manutenção sem a necessidade de refazer o onboarding.
+
+- Inclusão das páginas institucionais **Sobre**, **Funcionalidades**, **Suporte** (com FAQ) e **Política de Privacidade**, disponíveis através da tela de Configurações.
+
+- Implementação do sistema de acompanhamento diário de água e sono integrado ao Dashboard.
+
+- Criação da estrutura de persistência no backend para armazenamento dos registros diários de água, sono e preparação para futura integração da contagem de passos.
+
+- Adição de cards de hidratação e sono no Dashboard, permitindo registrar rapidamente o consumo de água e as horas dormidas.
+
+### Melhorado
+
+- Reorganização completa do Dashboard para centralizar informações de progresso, plano alimentar, metas, hidratação e sono em uma única tela.
+
+- Reformulação da navegação inferior, substituindo o atalho de Check-in pelo acesso às Configurações e reduzindo redundâncias na interface.
+
+- Exibição de médias de hidratação e sono calculadas pelo backend, proporcionando uma visão mais completa do acompanhamento diário.
+
+### Corrigido
+
+- Correções de espaçamento entre o campo de mensagem da IA e a barra de navegação inferior em diferentes plataformas.
+
+- Ajuste no fluxo de autenticação para evitar a exibição de telas intermediárias durante o processo de logout.
+
+### Conhecido
+
+- A meta diária de hidratação permanece fixa em **3000 ml**, sem possibilidade de personalização pelo usuário.
+
+- As médias de água e sono ainda exigem o recarregamento da tela após um novo registro para refletirem os valores atualizados.
+
+- O backend continua dependente da rede local de desenvolvimento, impossibilitando o uso do aplicativo fora da mesma rede até a realização do deploy da API.
+
+---
+
+---
+
 ---
 
 ## [0.1.0-alpha] - 2026-07-11

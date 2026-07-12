@@ -1,5 +1,5 @@
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
-import { useFocusEffect } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
@@ -16,6 +16,7 @@ import api from "../api";
 import { colors, radius, spacing, typography } from "../theme";
 
 export default function SettingsScreen({ token, onLogout }) {
+  const router = useRouter();
   const [carregando, setCarregando] = useState(true);
   const tabBarHeight = useBottomTabBarHeight();
 
@@ -237,6 +238,34 @@ export default function SettingsScreen({ token, onLogout }) {
         </Text>
       </TouchableOpacity>
 
+      <Text style={styles.secao}>Sobre o app</Text>
+      <TouchableOpacity
+        style={styles.linkInstitucional}
+        onPress={() => router.push("/sobre")}
+      >
+        <Text style={styles.linkInstitucionalTexto}>Sobre o Vitracka</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.linkInstitucional}
+        onPress={() => router.push("/funcionalidades")}
+      >
+        <Text style={styles.linkInstitucionalTexto}>Funcionalidades</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.linkInstitucional}
+        onPress={() => router.push("/suporte")}
+      >
+        <Text style={styles.linkInstitucionalTexto}>Suporte</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.linkInstitucional}
+        onPress={() => router.push("/privacidade")}
+      >
+        <Text style={styles.linkInstitucionalTexto}>
+          Política de Privacidade
+        </Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.botaoSair} onPress={onLogout}>
         <Text style={styles.botaoTextoSair}>Sair</Text>
       </TouchableOpacity>
@@ -299,4 +328,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
   },
+  linkInstitucional: {
+    backgroundColor: colors.card,
+    padding: spacing.md,
+    borderRadius: radius.button,
+    marginBottom: spacing.sm,
+  },
+  linkInstitucionalTexto: { color: colors.text, fontWeight: "600" },
 });

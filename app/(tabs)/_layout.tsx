@@ -83,22 +83,24 @@ export default function TabLayout() {
       <Tabs.Screen
         name="checkin"
         options={{
-          title: "Check-in",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol
-              size={26}
-              name="chart.line.uptrend.xyaxis"
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="configuracoes"
-        options={{
           href: null,
         }}
       />
+      ...
+      <Tabs.Screen
+        name="configuracoes"
+        options={{
+          title: "Config",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={26} name="gearshape.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen name="sobre" options={{ href: null }} />
+      <Tabs.Screen name="funcionalidades" options={{ href: null }} />
+      <Tabs.Screen name="suporte" options={{ href: null }} />
+      <Tabs.Screen name="privacidade" options={{ href: null }} />
+      <Tabs.Screen name="bemestar" options={{ href: null }} />
     </Tabs>
   );
 }
