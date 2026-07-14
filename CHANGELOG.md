@@ -1,8 +1,31 @@
-# Changelog
+# Changelog — Vitracka Mobile
 
 Todas as mudanças relevantes do projeto serão documentadas neste arquivo.
 
 O formato segue o padrão de versionamento semântico.
+
+## [0.2.1-alpha] - 2026-07-14
+
+### Adicionado
+
+- **Tela de Métricas**: nova tela dedicada ao histórico de água e sono, com cards de médias (diária, semanal, mensal) e lista dos últimos 30 dias, reaproveitando o endpoint `/api/tracker/historico` já existente desde a v0.2.0.
+- Link "Ver histórico completo" no card de médias do Dashboard, levando à nova tela de Métricas.
+
+### Melhorado
+
+- Nenhuma melhoria estrutural nesta versão.
+
+### Corrigido
+
+- Nenhuma correção relevante nesta versão.
+
+### Notas para a próxima versão
+
+- Geração de treino no backend foi reformulada (dias por nível de atividade, lista fechada de exercícios, validação automática) — o app mobile já se beneficia automaticamente disso via API, sem necessidade de mudança no cliente.
+- Meta de água ainda não é configurável pelo usuário (fixa em 3000ml).
+- Persistência de token e alteração de plano já cobertas na v0.2.0; deploy do backend segue como pendência.
+
+<br>
 
 ## [0.2.0-alpha] - 2026-07-12
 
@@ -44,11 +67,7 @@ O formato segue o padrão de versionamento semântico.
 
 - O backend continua dependente da rede local de desenvolvimento, impossibilitando o uso do aplicativo fora da mesma rede até a realização do deploy da API.
 
----
-
----
-
----
+<br>
 
 ## [0.1.0-alpha] - 2026-07-11
 

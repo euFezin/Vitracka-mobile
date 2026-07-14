@@ -101,6 +101,7 @@ export default function TabLayout() {
       <Tabs.Screen name="suporte" options={{ href: null }} />
       <Tabs.Screen name="privacidade" options={{ href: null }} />
       <Tabs.Screen name="bemestar" options={{ href: null }} />
+      <Tabs.Screen name="metricas" options={{ href: null }} />
     </Tabs>
   );
 }

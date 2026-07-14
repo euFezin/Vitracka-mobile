@@ -344,6 +344,20 @@ export default function DashboardScreen({ token }) {
                 {medias.sono_horas.semanal ?? "-"} h · Mensal:{" "}
                 {medias.sono_horas.mensal ?? "-"} h
               </Text>
+
+              <TouchableOpacity
+                style={styles.linkMetricas}
+                onPress={() => router.push("/metricas")}
+              >
+                <Text style={styles.linkMetricasTexto}>
+                  Ver histórico completo
+                </Text>
+                <Ionicons
+                  name="chevron-forward"
+                  size={16}
+                  color={colors.primary}
+                />
+              </TouchableOpacity>
             </View>
           )}
         </>
@@ -569,4 +583,17 @@ const styles = StyleSheet.create({
   },
   cenarioCalorias: { color: colors.text, fontSize: 16, fontWeight: "bold" },
   cenarioMacro: { color: colors.textMuted, fontSize: 13, marginTop: 2 },
+  linkMetricas: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: spacing.xs,
+    marginTop: spacing.md,
+    paddingVertical: spacing.sm,
+  },
+  linkMetricasTexto: {
+    color: colors.primary,
+    fontWeight: "bold",
+    fontSize: 13,
+  },
 });
